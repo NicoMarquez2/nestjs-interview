@@ -31,7 +31,6 @@ import {
     @Put('/items/:todoItemId')
     update(@Param() param: { todoListId: number, todoItemId: number },
             @Body() dto: UpdateTodoItemDto,): TodoItem {
-      console.log(param)
       return this.todoItemService.update(param, dto);
     }
 
